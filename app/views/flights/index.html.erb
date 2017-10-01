@@ -1,0 +1,49 @@
+<h1>Flights</h1>
+
+<%= form_tag flights_path, method: :GET do %>
+    <%= label_tag(:departure, "Departure Airport") %>
+    <%= select_tag(:departure, options_for_select(@departures)) %>
+    
+    <br>
+    
+    <%= label_tag(:arrival, "Arrival Airport") %>
+    <%= select_tag(:arrival, options_for_select(@arrivals))  %>
+    
+    <br>
+    
+    <%= label_tag(:departure_time, "Date:") %>
+    <%= select_tag(:departure_time, options_for_select(@dates))  %>
+    
+    <br>
+    
+    <%= submit_tag "Search" %>
+<% end %>
+
+
+
+<table>
+    <thead>
+        <th>Flight Number</th>
+        <th>Date</th>
+        <th>Select</th>
+    </thead>
+    <tbody>
+        <%= form_tag new_booking_path, method: :GET do %>
+            <% @flights.each do |f| %>
+                <tr>
+                    <td><%= f.flight_number %></td>
+                    <td><%= f.departure_time %></td>
+                    <td>
+                        <%= hidden_field_tag(:selected, f.id) %>
+                        <%= submit_tag "Book the flight" %>
+                    </td>
+                </tr>
+            <% end %>
+        <% end %>        
+    </tbody>    
+</table>
+
+
+    
+
+    
