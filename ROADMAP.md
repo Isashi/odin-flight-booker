@@ -38,3 +38,4 @@ FIXES AFTER PP WITH ANDY
 * New Seeds
 * Flight ordered by departure_time
 * More info in confirmation page (booking/show.html.erb)
+* Implemented search by departure_time (not intuitive, since you have to know the departure time)
