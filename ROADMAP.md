@@ -16,20 +16,25 @@ Set up seed file
 ~~Create Passenger model~~
 ~~Create Booking model~~
 ~~Set associations~~
-Set up seed file
+~~Set up seed file~~
 
 FRONT PAGE
 
-Build front page
+~~Build front page~~
   * Select departure and arrival from dropdown selects
   * Click search
 
-Pick from available flights
-Submit to booking page
+~~Pick from available flights~~
+~~Submit to booking page~~
 
 
 BOOKING PAGE
 
-User enters information
-Clicks submit   
-Sees confirmation page
+~~User enters information~~
+~~Clicks submit~~   
+~~Sees confirmation page~~
+
+FIXES AFTER PP WITH ANDY
+* New Seeds
+* Flight ordered by departure_time
+* More info in confirmatio page (booking/show.html.erb)

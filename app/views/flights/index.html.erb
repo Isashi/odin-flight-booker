@@ -29,7 +29,7 @@
     </thead>
     <tbody>
         <%= form_tag new_booking_path, method: :GET do %>
-            <% @flights.each do |f| %>
+            <% @flights.order("departure_time").each do |f| %>
                 <tr>
                     <td><%= f.flight_number %></td>
                     <td><%= f.departure_time %></td>

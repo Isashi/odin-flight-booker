@@ -1,7 +1,17 @@
 <h1>Confirmation page</h1>
 
+<h2>Flight Details:</h2>
 Flight: <%= @booking.flight.flight_number %>
+<br>
 Departure: <%= @booking.flight.departure.name %>
 <br>
+Arrival: <%= @booking.flight.arrival.name %>
+<br>
+Departure time: <%= @booking.flight.departure_time %>
+<br>
+<br>
+<h2>Passengers:</h2>
 Name: <%= @booking.passengers.first.name %>
+<br>
+Email: <%= @booking.passengers.first.email %>
 
