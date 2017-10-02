@@ -2,18 +2,17 @@
 
 <%= form_tag flights_path, method: :GET do %>
     <%= label_tag(:departure, "Departure Airport") %>
-    <%= select_tag(:departure, options_for_select(@departures)) %>
-    
+    <%= select_tag(:departure, options_for_select(@departures), required: true, include_blank: true) %>
+
     <br>
     
     <%= label_tag(:arrival, "Arrival Airport") %>
-    <%= select_tag(:arrival, options_for_select(@arrivals))  %>
+    <%= select_tag(:arrival, options_for_select(@arrivals), required: true, include_blank: true) %>
     
     <br>
     
     <%= label_tag(:departure_time, "Date:") %>
-    <%= select_tag(:departure_time, options_for_select(@dates))  %>
-    
+    <%= select_tag(:departure_time, options_for_select(@dates), required: true, include_blank: true) %>
     <br>
     
     <%= submit_tag "Search" %>

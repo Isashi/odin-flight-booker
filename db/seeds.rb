@@ -18,21 +18,6 @@ Airport.create!(name: "Paris", code: "CDG")
 Airport.create!(name: "Amsterdam", code: "AMS")
 Airport.create!(name: "Frankfurt", code: "FRA")
 
-Flight.create!(
-    flight_number: 1, 
-    passengers: 300, 
-    departure_time: "12/10/2017",
-    departure: Airport.first, 
-    arrival: Airport.last
-)
-Flight.create!(
-    flight_number: 2, 
-    passengers: 300, 
-    departure_time: "09/10/2017",
-    departure: Airport.second, 
-    arrival: Airport.last
-)
-
 airports = Airport.all
 
 airports.each do |from|
@@ -43,7 +28,7 @@ airports.each do |from|
           passengers: 300,
           departure:from,
           arrival:to,
-          departure_time:(Time.now + rand(200).days+ rand(100000))) unless from == to
+          departure_time:(Faker::Time.forward(60))) unless from == to
     end
   end
 end

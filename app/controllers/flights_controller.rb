@@ -6,13 +6,13 @@ class FlightsController < ApplicationController
         #@dates = Flight.select(:departure_time).map{ |f| f.departure_time.strftime("%b %d %Y") }
         
         #FORMAT year-month-day (like 2017-12-15)
-        @dates = Flight.select(:departure_time).distinct.order("departure_time ASC").map{ |f| f.departure_time.strftime("%Y-%m-%d") }
+        @dates = Flight.date_list
         
         #SEACH BY DEPARTURE AND ARRIVAL
         #@flights = Flight.where("departure_id = ? AND arrival_id = ?", params[:departure], params[:arrival])
         
         #SEACH BY DEPARTURE, ARRIVAL, DEPARTURE TIME (NOT INTUITIVE SINCE YOU HAVE TO KNOW THE DEPARTURE DATE).
         #IT WORKS ONLY WITH year-month-day FORMAT
-        @flights = Flight.where("departure_id = ? AND arrival_id = ? AND departure_time = ?", params[:departure], params[:arrival], params[:departure_time])
+        @flights = Flight.lookup(params[:departure], params[:arrival], params[:departure_time])
     end
 end
