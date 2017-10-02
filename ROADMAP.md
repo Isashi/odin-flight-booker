@@ -37,4 +37,4 @@ BOOKING PAGE
 FIXES AFTER PP WITH ANDY
 * New Seeds
 * Flight ordered by departure_time
-* More info in confirmatio page (booking/show.html.erb)
+* More info in confirmation page (booking/show.html.erb)

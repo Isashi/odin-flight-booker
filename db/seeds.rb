@@ -38,7 +38,7 @@ airports = Airport.all
 airports.each do |from|
   airports.each do |to|
     4.times do
-      Flight.create(
+      Flight.create!(
           flight_number: 4.times.map{rand(10)}.join,
           passengers: 300,
           departure:from,
