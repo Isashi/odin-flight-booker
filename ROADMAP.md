@@ -35,8 +35,10 @@ BOOKING PAGE
 ~~Sees confirmation page~~
 
 FIXES AFTER PP WITH ANDY
-* New Seeds
-* Flight ordered by departure_time
-* More info in confirmation page (booking/show.html.erb)
-* Implemented search by departure_time (not intuitive, since you have to know the departure time)
-* Fixed departure dates in search form (no repetition and ordered)
+02/10: New Seeds
+02/10: Flight ordered by departure_time
+02/10: More info in confirmation page (booking/show.html.erb)
+02/10: Implemented search by departure_time (not intuitive, since you have to know the departure time)
+02/10: Fixed departure dates in search form (no repetition and ordered)
+03/10: Installed Bootstrap
+03/10: Added basic design and background image
