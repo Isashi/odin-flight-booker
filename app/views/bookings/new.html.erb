@@ -3,11 +3,15 @@
 
 <%= form_for @booking do |f| %>
     <%= f.fields_for :passengers do |p| %>
-        <%= p.label :name %>
-        <%= p.text_field :name %>
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">Name</span>
+          <%= p.text_field :name %>
+        </div>
         <br>
-        <%= p.label :email %>
-        <%= p.text_field :email %>
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">Email</span>
+          <%= p.text_field :email %>
+        </div>
     <% end %>
     <br>
     <%= f.hidden_field "flight_id", value: params[:selected] %>

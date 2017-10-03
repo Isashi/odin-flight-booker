@@ -12,9 +12,8 @@
     <br>
     
     <%= label_tag(:departure_time, "Date:") %>
-    <%= select_tag(:departure_time, options_for_select(@dates), required: true, include_blank: true) %>
+        <%= select_tag(:departure_time, options_for_select(@dates, {:class => 'dropup btn btn-default dropdown-toggle'}), required: true, include_blank: true) %>
     <br>
-    
     <%= submit_tag "Search" %>
 <% end %>
 

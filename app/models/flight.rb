@@ -12,6 +12,7 @@ class Flight < ActiveRecord::Base
     date.map { |f| f.departure_time.strftime("%b %d %Y") }.uniq
   end
   
+  #Andy Code
   def self.lookup(departure, arrival, day)
     Flight.where(departure_id: departure,
                  arrival_id: arrival,
@@ -19,7 +20,8 @@ class Flight < ActiveRecord::Base
   end
 
   private
-
+  
+  #Andy Code
   def self.day_range(date)
     unless date.nil?
       date = date.to_date
