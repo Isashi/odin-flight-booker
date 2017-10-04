@@ -5,10 +5,65 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
+  <link rel="stylesheet" href="/assets/ionicons.min.css">
+	<link rel="stylesheet" href="/assets/owl.carousel.css">
+	<link rel="stylesheet" href="/assets/owl.theme.css">
+	<link rel="stylesheet" href="/assets/flexslider.css" type="text/css">
+  <link rel="stylesheet" href="/assets/main.css">
+  
 </head>
 <body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html" title="HOME"><i class="ion-paper-airplane"></i> euro <span>travel</span></a>
+			</div> <!-- /.navbar-header -->
 
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="about.html">about</a></li>
+					<li><a href="services.html">services</a></li>
+					<li><a href="contact.html">contact</a></li>
+				</ul> <!-- /.nav -->
+		    </div><!-- /.navbar-collapse -->
+	  	</div><!-- /.container -->
+	</nav>
+	
+	
 <%= yield %>
+		
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4">
+					<div class="text-left">
+						&copy; Copyright Euro Travels
+					</div>
+				</div>
+				<div class="col-xs-4">
+					Theme by <a href="http://www.themewagon.com">THEMEWAGON</a>
+				</div>
+				<div class="col-xs-4">
+					<div class="top">
+						<a href="#header">
+							<i class="ion-arrow-up-b"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</footer>
+
 
 </body>
 </html>
