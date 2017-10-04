@@ -1,46 +1,67 @@
-<h1>Flights</h1>
+<!-- Find a Tour -->
+	<section class="tour section-wrapper container">
+		<h2 class="section-title">
+			Where would you like to go?
+		</h2>
+		<p class="section-subtitle">
+			Select departure airport, arrival airport and date!
+		</p>
+	
 
-<%= form_tag flights_path, method: :GET do %>
+
+
+
+    <!-- Form for departure airport, arrival airport, date, submission button -->
+    <div class="row">
+    <%= form_tag flights_path, method: :GET do %>
+
+    <div class="col-md-3 col-sm-6">
     <%= label_tag(:departure, "Departure Airport") %>
-    <%= select_tag(:departure, options_for_select(@departures), required: true, include_blank: true) %>
+    <%= select_tag(:departure, options_for_select(@departures), {:class => 'form-control border-radius form-dropdown form-group', :id => "sel1"}) %>
+	</div>
 
-    <br>
-    
+    <div class="col-md-3 col-sm-6">
     <%= label_tag(:arrival, "Arrival Airport") %>
-    <%= select_tag(:arrival, options_for_select(@arrivals), required: true, include_blank: true) %>
+    <%= select_tag(:arrival, options_for_select(@arrivals), {:class => 'form-control border-radius form-dropdown form-group', :id => "sel1"}) %>
+    </div>
     
-    <br>
-    
+    <div class="col-md-3 col-sm-6">
     <%= label_tag(:departure_time, "Date:") %>
-    <%= select_tag(:departure_time, options_for_select(@dates), required: true, include_blank: true) %>
-    <br>
+    <%= select_tag(:departure_time, options_for_select(@dates), {:class => 'form-control border-radius form-dropdown form-group', :id => "sel1"}) %>
+    </div>
     
-    <%= submit_tag "Search" %>
-<% end %>
+    <div class="col-md-3 col-sm-6">
+    <%= submit_tag "Search", {:class => 'btn btn-default border-radius custom-button'} %>
+    </div>
+    <% end %>
 
+    </div>
+    
+    </section>
+    <!-- /Form for departure airport, arrival airport, date, submission button -->
 
+	<section class="tour section-wrapper container">
+	
+		<h2 class="section-title">
+			Pick your flight!
+		</h2>
 
 <table>
-    <thead>
-        <th>Flight Number</th>
-        <th>Date</th>
-        <th>Select</th>
-    </thead>
     <tbody>
         <%= form_tag new_booking_path, method: :GET do %>
             <% @flights.order("departure_time").each do |f| %>
                 <tr>
-                    <td><%= f.flight_number %></td>
-                    <td><%= f.departure_time %></td>
+                    <td><div class="col-md-3 col-sm-6"><span class="input-group-addon border-radius custom-addon"><%= f.flight_number  %> - <%= f.departure_time %></span></div></td>
                     <td>
                         <%= hidden_field_tag(:selected, f.id) %>
-                        <%= submit_tag "Book the flight" %>
+                        <%= submit_tag "Book the flight", {:class => 'btn btn-default border-radius custom-button'} %>
                     </td>
                 </tr>
             <% end %>
         <% end %>        
     </tbody>    
 </table>
+</section>
 
 
     

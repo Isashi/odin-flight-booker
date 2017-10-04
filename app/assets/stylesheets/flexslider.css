@@ -15,8 +15,8 @@
 
 @font-face {
     font-family: 'flexslider-icon';
-    src: url('fonts/flexslider-icon.eot');
-    src: url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('fonts/flexslider-icon.woff') format('woff'), url('fonts/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+    src: font-url('flexslider-icon.eot');
+    src: font-url('flexslider-icon.eot?#iefix') format('embedded-opentype'), url('flexslider-icon.woff') format('woff'), font-url('flexslider-icon.ttf') format('truetype'), font-url('flexslider-icon.svg#flexslider-icon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -137,14 +137,16 @@ html[xmlns] .flexslider .slides {
 }
 .flex-direction-nav a:before {
     font-family: "flexslider-icon";
-    font-size: 40px;
+    font-size: 30px;
     display: inline-block;
-    content: '\f001';
+      font-family: "Glyphicons Halflings";
+  content: "\e079";
     color: rgba(0, 0, 0, 0.8);
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 }
 .flex-direction-nav a.flex-next:before {
-    content: '\f002';
+  font-family: "Glyphicons Halflings";
+  content: "\e080";
 }
 .flex-direction-nav .flex-prev {
     left: -50px;
