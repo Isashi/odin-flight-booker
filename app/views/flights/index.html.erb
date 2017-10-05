@@ -16,21 +16,24 @@
     <%= form_tag flights_path, method: :GET do %>
 
     <div class="col-md-3 col-sm-6">
+    <span class="label label-info">Departure airport</span>
     <%= label_tag(:departure, "Departure Airport") %>
     <%= select_tag(:departure, options_for_select(@departures), {:class => 'form-control border-radius form-dropdown form-group', :id => "sel1"}) %>
 	</div>
 
     <div class="col-md-3 col-sm-6">
+    <span class="label label-info">Arrival airport</span><br>
     <%= label_tag(:arrival, "Arrival Airport") %>
     <%= select_tag(:arrival, options_for_select(@arrivals), {:class => 'form-control border-radius form-dropdown form-group', :id => "sel1"}) %>
     </div>
     
     <div class="col-md-3 col-sm-6">
+    <span class="label label-info">Date</span><br> 
     <%= label_tag(:departure_time, "Date:") %>
     <%= select_tag(:departure_time, options_for_select(@dates), {:class => 'form-control border-radius form-dropdown form-group', :id => "sel1"}) %>
     </div>
     
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-3 col-sm-6"><br>
     <%= submit_tag "Search", {:class => 'btn btn-default border-radius custom-button'} %>
     </div>
     <% end %>

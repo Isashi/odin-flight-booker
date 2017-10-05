@@ -45,7 +45,16 @@ FIXES AFTER PAIR PROGRAMMING WITH ANDY
 * Created home page
 * Customized homepage and flight#index theme
 
+TO DO
+* Fix time in the choose of the flights
+* Change pictures in the home page
+* Change the links in the navbar (leave only the ABOUT)
+* 
+
 
 QUESTIONS TO ASK
 * How to create link_to between pages (like from homepage to flight#index)
+* How to add a label above the dropdown forms?
+* How to add a alert message if no flights are available on that date?
+* How to add add the possibility to pick the numbers of passengers?
 * 
